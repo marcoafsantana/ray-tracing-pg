@@ -1,2 +1,2 @@
 # ray-tracing-pg
-Basic Ray-Tracing for the design of the graphic processing course for the Computer Science-CIn UFPE
+Ray-Tracing  project for the graphic processing course for the Computer Science Bachelors at CIn UFPE

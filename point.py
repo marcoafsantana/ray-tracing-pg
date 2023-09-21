@@ -12,4 +12,4 @@ class Point:
         self.z = z
 
     def __str__(self):
-        return f"Poin({self.x}, {self.y}, {self.z})"
+        return f"Point ({self.x}, {self.y}, {self.z})"

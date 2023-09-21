@@ -2,13 +2,12 @@ import math
 
 
 class Vector:
-
     def __init__(self, x: float, y: float, z: float) -> None:
         self.x = x
         self.y = y
         self.z = z
 
-    def str_(self) -> str:
+    def __str__(self) -> str:
         return "({},{},{})".format(self.x, self.y, self.z)
 
     def inner_product(self, other) -> float:
@@ -18,21 +17,21 @@ class Vector:
         return math.sqrt(self.inner_product(self))
 
     def __add__(self, other):
-        return Vector(self.x + other.x, self.y + other.y, self.z + other.z)
+        return self.__class__(self.x + other.x, self.y + other.y, self.z + other.z)
 
     def __sub__(self, other):
-        return Vector(self.x - other.x, self.y - other.y, self.z - other.z)
+        return self.__class__(self.x - other.x, self.y - other.y, self.z - other.z)
 
     def __mul__(self, k: float):
-        assert not isinstance(k, Vector)
-        return Vector(self.x*k, self.y*k, self.z*k)
+        assert not isinstance(k, self.__class__)
+        return self.__class__(self.x*k, self.y*k, self.z*k)
 
     def __rmul__(self, other):
         return self.__mul__(other)
 
     def __truediv__(self, other):
-        assert not isinstance(other, Vector)
-        return Vector(self.x / other, self.y / other, self.z / other)
+        assert not isinstance(other, self.__class__)
+        return self.__class__(self.x / other, self.y / other, self.z / other)
 
     def normalize(self):
         return self / self.modulo()
@@ -40,6 +39,6 @@ class Vector:
 
 v1 = Vector(2, 3, 4)
 v2 = Vector(1, 2, 5)
-v3 = v1.sum(v2)
+v3 = v1+v2
 print(v1.normalize())
-print(v3.str_())
+print(v3)

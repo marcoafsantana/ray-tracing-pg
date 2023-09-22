@@ -14,4 +14,7 @@ Ray-Tracing  project for the graphic processing course for the Computer Science 
 4. You local env is configured!
 
 ## Running our project:
-[TBD]
+
+1. Run our command:
+    - `python3 main.py`
+2. Check `test.png for output`

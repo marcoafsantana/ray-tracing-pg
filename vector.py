@@ -37,8 +37,8 @@ class Vector:
         return self / self.modulo()
 
 
-v1 = Vector(2, 3, 4)
-v2 = Vector(1, 2, 5)
-v3 = v1+v2
-print(v1.normalize())
-print(v3)
+# v1 = Vector(2, 3, 4)
+# v2 = Vector(1, 2, 5)
+# v3 = v1+v2
+# print(v1.normalize())
+# print(v3)
